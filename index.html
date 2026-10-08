@@ -1,96 +1,556 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio - Mirza</title>
-    <!-- Google Fonts -->
+    <meta name="description"
+        content="Portfolio resmi Naufal Mirza Nugraha — MC & Event Planner, Siswa XI-PPLG SMK Telkom Purwokerto.">
+    <title>Naufal Mirza Nugraha — MC & Event Planner</title>
+
+    <!-- Google Fonts: Cormorant Garamond + Manrope -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Navigation Bar -->
-    <header class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">Mirza<span>.dev</span></a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#home" class="active">Beranda</a></li>
-                    <li><a href="#about">Tentang</a></li>
-                    <li><a href="#projects">Proyek</a></li>
-                    <li><a href="#contact">Kontak</a></li>
-                </ul>
-            </nav>
-            <button id="cta-btn" class="btn btn-outline">Sapa Saya</button>
+
+    <!-- ═══════════════════════════════════════════════
+         FLOWING GOLD BACKGROUND — SVG Strands
+         Full-page background layer, pointer-events: none
+    ═══════════════════════════════════════════════ -->
+    <div class="bg-canvas" aria-hidden="true">
+        <svg class="gold-strands" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1440 4200">
+            <defs>
+                <!-- Metallic gold gradient along strand -->
+                <linearGradient id="g1" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#7c5a0a" stop-opacity="0" />
+                    <stop offset="15%" stop-color="#b8862a" stop-opacity="0.55" />
+                    <stop offset="35%" stop-color="#e8c96a" stop-opacity="0.85" />
+                    <stop offset="55%" stop-color="#f5e4a0" stop-opacity="0.9" />
+                    <stop offset="75%" stop-color="#c8942e" stop-opacity="0.7" />
+                    <stop offset="90%" stop-color="#f8f0d0" stop-opacity="0.5" />
+                    <stop offset="100%" stop-color="#7c5a0a" stop-opacity="0" />
+                </linearGradient>
+                <linearGradient id="g2" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#6b4e0a" stop-opacity="0" />
+                    <stop offset="20%" stop-color="#d4a840" stop-opacity="0.6" />
+                    <stop offset="45%" stop-color="#faf0c8" stop-opacity="0.95" />
+                    <stop offset="65%" stop-color="#e0b050" stop-opacity="0.75" />
+                    <stop offset="85%" stop-color="#a87820" stop-opacity="0.45" />
+                    <stop offset="100%" stop-color="#5c4008" stop-opacity="0" />
+                </linearGradient>
+                <linearGradient id="g3" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#9c7218" stop-opacity="0" />
+                    <stop offset="25%" stop-color="#c89832" stop-opacity="0.4" />
+                    <stop offset="50%" stop-color="#f0d888" stop-opacity="0.7" />
+                    <stop offset="75%" stop-color="#fffae8" stop-opacity="0.55" />
+                    <stop offset="100%" stop-color="#8c6818" stop-opacity="0" />
+                </linearGradient>
+                <linearGradient id="g4" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#5a3a08" stop-opacity="0" />
+                    <stop offset="30%" stop-color="#b87c20" stop-opacity="0.35" />
+                    <stop offset="60%" stop-color="#e8c458" stop-opacity="0.65" />
+                    <stop offset="80%" stop-color="#f8f0c8" stop-opacity="0.8" />
+                    <stop offset="100%" stop-color="#7c5a10" stop-opacity="0" />
+                </linearGradient>
+                <linearGradient id="g5" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#c8a030" stop-opacity="0" />
+                    <stop offset="20%" stop-color="#f0d070" stop-opacity="0.5" />
+                    <stop offset="50%" stop-color="#fffdf0" stop-opacity="0.9" />
+                    <stop offset="80%" stop-color="#d4a840" stop-opacity="0.55" />
+                    <stop offset="100%" stop-color="#8c6810" stop-opacity="0" />
+                </linearGradient>
+                <linearGradient id="g6" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#6b4a08" stop-opacity="0" />
+                    <stop offset="35%" stop-color="#c09028" stop-opacity="0.3" />
+                    <stop offset="65%" stop-color="#e8c060" stop-opacity="0.6" />
+                    <stop offset="100%" stop-color="#7c5a10" stop-opacity="0" />
+                </linearGradient>
+                <filter id="glow1">
+                    <feGaussianBlur stdDeviation="2.5" result="blur" />
+                    <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                </filter>
+                <filter id="glow2">
+                    <feGaussianBlur stdDeviation="1.5" result="blur" />
+                    <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                </filter>
+            </defs>
+
+            <!-- ── GROUP 1: Wide primary strands (medium weight, flowing S-curves) ── -->
+            <!-- Strand A: broad sweep right→left→right, dominant -->
+            <path
+                d="M 1180,0 C 1050,420 820,680 920,1080 C 1020,1480 1250,1700 1100,2100 C 950,2500 680,2750 820,3180 C 960,3610 1150,3850 980,4200"
+                fill="none" stroke="url(#g1)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"
+                filter="url(#glow1)" />
+
+            <!-- Strand B: offset, slightly narrower -->
+            <path
+                d="M 1060,0 C 920,380 740,650 840,1020 C 940,1390 1180,1620 1020,2020 C 860,2420 600,2680 740,3120 C 880,3560 1090,3800 920,4200"
+                fill="none" stroke="url(#g2)" stroke-width="2.2" stroke-linecap="round" opacity="0.75"
+                filter="url(#glow2)" />
+
+            <!-- Strand C: leftward pull, ghost highlight -->
+            <path
+                d="M 940,0 C 820,360 620,640 700,1000 C 780,1360 980,1560 860,1960 C 740,2360 500,2620 640,3080 C 780,3540 1000,3760 840,4200"
+                fill="none" stroke="url(#g5)" stroke-width="1.5" stroke-linecap="round" opacity="0.6" />
+
+            <!-- ── GROUP 2: Mid cluster (center-right zone) ── -->
+            <path
+                d="M 820,0 C 700,340 540,580 640,980 C 740,1380 960,1560 820,1980 C 680,2400 420,2640 580,3060 C 740,3480 940,3700 760,4200"
+                fill="none" stroke="url(#g3)" stroke-width="1.8" stroke-linecap="round" opacity="0.65"
+                filter="url(#glow2)" />
+
+            <path
+                d="M 700,0 C 600,320 460,560 560,940 C 660,1320 860,1520 720,1940 C 580,2360 340,2600 500,3020 C 660,3440 860,3680 680,4200"
+                fill="none" stroke="url(#g4)" stroke-width="1.2" stroke-linecap="round" opacity="0.5" />
+
+            <!-- ── GROUP 3: Left-anchor strands (add organic feel) ── -->
+            <path
+                d="M 560,0 C 480,300 360,540 440,920 C 520,1300 720,1500 580,1940 C 440,2380 220,2620 380,3060 C 540,3500 720,3720 540,4200"
+                fill="none" stroke="url(#g6)" stroke-width="1.4" stroke-linecap="round" opacity="0.45" />
+
+            <path
+                d="M 420,0 C 360,280 260,510 340,880 C 420,1250 620,1460 480,1900 C 340,2340 120,2580 280,3040 C 440,3500 620,3720 420,4200"
+                fill="none" stroke="url(#g1)" stroke-width="0.9" stroke-linecap="round" opacity="0.35" />
+
+            <!-- ── GROUP 4: Far-right accent strands ── -->
+            <path
+                d="M 1320,0 C 1180,440 1000,700 1120,1120 C 1240,1540 1380,1780 1240,2200 C 1100,2620 860,2840 1020,3280 C 1180,3720 1340,3940 1160,4200"
+                fill="none" stroke="url(#g2)" stroke-width="1.6" stroke-linecap="round" opacity="0.55"
+                filter="url(#glow2)" />
+
+            <path
+                d="M 1420,0 C 1300,380 1100,660 1240,1060 C 1380,1460 1440,1680 1360,2080 C 1280,2480 1040,2720 1200,3180 C 1360,3640 1440,3900 1280,4200"
+                fill="none" stroke="url(#g3)" stroke-width="1.1" stroke-linecap="round" opacity="0.4" />
+
+            <!-- ── GROUP 5: Ultra-thin highlight threads (near-white shimmer) ── -->
+            <path
+                d="M 990,0 C 870,350 690,640 780,1040 C 870,1440 1090,1640 950,2060 C 810,2480 560,2720 700,3160 C 840,3600 1050,3840 880,4200"
+                fill="none" stroke="#f8f0d8" stroke-width="0.7" stroke-linecap="round" opacity="0.5" />
+
+            <path
+                d="M 870,0 C 760,330 580,620 660,1020 C 740,1420 960,1600 830,2020 C 700,2440 460,2680 600,3120 C 740,3560 950,3800 780,4200"
+                fill="none" stroke="#fffdf0" stroke-width="0.5" stroke-linecap="round" opacity="0.35" />
+
+            <path
+                d="M 1140,0 C 1020,410 820,690 930,1090 C 1040,1490 1260,1710 1120,2110 C 980,2510 720,2760 860,3200 C 1000,3640 1180,3880 1020,4200"
+                fill="none" stroke="#faf0d0" stroke-width="0.6" stroke-linecap="round" opacity="0.4" />
+
+            <!-- ── GROUP 6: Very subtle fill strands for depth ── -->
+            <path
+                d="M 300,0 C 260,250 200,480 260,840 C 320,1200 500,1400 380,1820 C 260,2240 60,2480 200,2940 C 340,3400 520,3660 340,4200"
+                fill="none" stroke="url(#g6)" stroke-width="0.8" stroke-linecap="round" opacity="0.25" />
+
+            <path
+                d="M 160,0 C 130,220 90,440 140,780 C 190,1120 380,1320 260,1740 C 140,2160 -20,2420 120,2880 C 260,3340 420,3600 240,4200"
+                fill="none" stroke="url(#g4)" stroke-width="0.6" stroke-linecap="round" opacity="0.2" />
+        </svg>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+         NAVBAR
+    ═══════════════════════════════════════════════ -->
+    <header class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-brand" id="nav-brand">
+                <span class="nav-brand-name">Mirza</span><span class="nav-brand-dot">.</span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link" id="nav-link-home">Home</a></li>
+                <li><a href="#about" class="nav-link" id="nav-link-about">About</a></li>
+                <li><a href="#experience" class="nav-link" id="nav-link-exp">Experience</a></li>
+                <li><a href="#skills" class="nav-link" id="nav-link-skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" id="nav-link-projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" id="nav-link-contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#contact" class="nav-cta" id="nav-cta-btn">Hubungi</a>
+                <button class="nav-hamburger" id="navToggle" aria-label="Buka menu mobile" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <main>
-        <section id="home" class="hero-section">
-            <div class="container hero-container">
-                <div class="hero-badge">👋 Selamat Datang di Web Portofolio</div>
-                <h1 class="hero-title">Halo, saya <span class="highlight">Mirza</span></h1>
-                <p class="hero-subtitle">Siswa SMK Telkom yang bersemangat dalam dunia pengembangan web dan teknologi.</p>
-                <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary">Lihat Portofolio</a>
-                    <a href="#contact" class="btn btn-secondary">Hubungi Saya</a>
-                </div>
+    <!-- ═══════════════════════════════════════════════
+         HERO SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="home" class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-eyebrow" id="hero-eyebrow">
+                <span class="eyebrow-dot eyebrow-dot--green"></span>
+                <span>Available for Event</span>
             </div>
-        </section>
 
-        <!-- About Section Placeholder -->
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title">Tentang Saya</h2>
-                <div class="card">
-                    <p>Halo! Saya adalah seorang pelajar yang gemar mempelajari hal baru terutama seputar web development, UI/UX, dan pemrograman modern. Halaman ini siap kamu kembangkan lebih lanjut!</p>
-                </div>
+            <h1 class="hero-name" id="hero-name">
+                Naufal Mirza<br><em class="hero-name-last">Nugraha</em>
+            </h1>
+
+            <div class="hero-school" id="hero-school">
+                Siswa Kelas XI-PPLG SMK Telkom Purwokerto
             </div>
-        </section>
 
-        <!-- Projects Section Placeholder -->
-        <section id="projects" class="section">
-            <div class="container">
-                <h2 class="section-title">Proyek Unggulan</h2>
-                <div class="grid-cards">
-                    <div class="card project-card">
-                        <div class="card-tag">Web Design</div>
-                        <h3>Proyek Portofolio</h3>
-                        <p>Website portofolio pribadi dibuat dengan HTML5, CSS3 murni, dan JavaScript.</p>
-                    </div>
-                    <div class="card project-card">
-                        <div class="card-tag">Eksplorasi</div>
-                        <h3>Proyek Mendatang</h3>
-                        <p>Ruang untuk karya dan aplikasi menarik yang akan kamu buat selanjutnya.</p>
-                    </div>
-                </div>
+            <div class="hero-role-wrap" id="hero-role">
+                <span class="hero-role-line"></span>
+                <span class="hero-role-text">MC &amp; Event Planner</span>
+                <span class="hero-role-line"></span>
             </div>
-        </section>
 
-        <!-- Contact Section Placeholder -->
-        <section id="contact" class="section">
-            <div class="container">
-                <h2 class="section-title">Hubungi Saya</h2>
-                <div class="card contact-card">
-                    <p>Tertarik untuk berkolaborasi atau sekadar berdiskusi seputar teknologi?</p>
-                    <a href="mailto:mirza@example.com" class="btn btn-primary">Kirim Email</a>
-                </div>
+            <p class="hero-bio" id="hero-bio">
+                Merancang momen yang berkesan — dari panggung hingga balik layar.<br>
+                Siswa kreatif yang berdedikasi membangun pengalaman event yang profesional &amp; berkarakter.
+            </p>
+
+            <div class="hero-cta-group" id="hero-cta">
+                <a href="#projects" class="btn-gold" id="btn-explore">
+                    Jelajahi Portofolio
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn-ghost" id="btn-contact-hero">
+                    Hubungi Saya
+                </a>
             </div>
-        </section>
-    </main>
+        </div>
 
-    <!-- Footer -->
-    <footer class="footer">
+        <div class="hero-scroll-hint" aria-hidden="true">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         ABOUT SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="about" class="section-about">
         <div class="container">
-            <p>&copy; 2026 Mirza - SMK Telkom. Dibuat dengan semangat belajar.</p>
+            <div class="section-header">
+                <span class="section-tag" id="about-tag">Tentang Saya</span>
+                <h2 class="section-title" id="about-title">Siapa Mirza?</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card about-main" id="about-card-main">
+                    <span class="card-label">Biografi</span>
+                    <h3 class="about-card-heading">Suara di Panggung,<br>Strategi di Balik Layar</h3>
+                    <p class="about-card-body">
+                        Naufal Mirza Nugraha adalah seorang MC berbakat dan perencana event dari SMK Telkom Purwokerto.
+                        Dengan passion di bidang komunikasi publik dan manajemen acara, Mirza percaya bahwa setiap event
+                        adalah kanvas untuk menciptakan pengalaman yang tak terlupakan.
+                    </p>
+                    <div class="about-facts">
+                        <div class="fact-item" id="fact-1">
+                            <span class="fact-label">Institusi</span>
+                            <strong class="fact-value">SMK Telkom Purwokerto</strong>
+                        </div>
+                        <div class="fact-item" id="fact-2">
+                            <span class="fact-label">Kelas</span>
+                            <strong class="fact-value">XI-PPLG</strong>
+                        </div>
+                        <div class="fact-item" id="fact-3">
+                            <span class="fact-label">Fokus</span>
+                            <strong class="fact-value">MC &amp; Event Planning</strong>
+                        </div>
+                        <div class="fact-item" id="fact-4">
+                            <span class="fact-label">Lokasi</span>
+                            <strong class="fact-value">Purwokerto, Jawa Tengah</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-card about-accent" id="about-card-accent">
+                    <span class="card-label" style="color: var(--gold-pale);">Filosofi</span>
+                    <blockquote class="about-quote" id="about-quote">
+                        "Setiap panggung adalah kesempatan — setiap event adalah karya."
+                    </blockquote>
+                    <p class="about-accent-body">
+                        Profesionalisme bukan hanya soal tampilan, tetapi tentang mempersiapkan setiap detail
+                        agar momen berjalan sempurna bagi semua orang yang hadir.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         EXPERIENCE SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="experience" class="section-experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" id="exp-tag">Rekam Jejak</span>
+                <h2 class="section-title" id="exp-title">Pengalaman</h2>
+                <p class="section-subtitle" id="exp-sub">Perjalanan dalam dunia MC, event, dan organisasi.</p>
+            </div>
+
+            <div class="timeline" id="timeline">
+                <div class="timeline-item" id="exp-item-1">
+                    <div class="timeline-marker">
+                        <span class="timeline-dot"></span>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-period">2025 — Sekarang</span>
+                        <h3 class="timeline-title">MC Acara Eksternal</h3>
+                        <p class="timeline-desc">
+                            Beberapa kali dipercaya untuk menjadi MC di berbagai acara, mulai dari kegiatan di sekolah
+                            hingga acara wedding di luar sekolah dan berbagai event lainnya.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" id="exp-item-2">
+                    <div class="timeline-marker">
+                        <span class="timeline-dot"></span>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-period">2024 — Sekarang</span>
+                        <h3 class="timeline-title">Event Coordinator</h3>
+                        <p class="timeline-desc">
+                            Sering dipercaya mengurus dan merancang jalannya suatu acara. Dalam satu tahun ini berhasil
+                            menangani hingga 10 event besar, semua dijalani sambil tetap menjalankan kewajiban sebagai pelajar.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" id="exp-item-3">
+                    <div class="timeline-marker">
+                        <span class="timeline-dot"></span>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-period">2025 — Sekarang</span>
+                        <h3 class="timeline-title">Organisasi</h3>
+                        <p class="timeline-desc">
+                            Selalu aktif dalam organisasi dan kerap menyumbangkan argumen yang berbobot
+                            demi kemajuan program kerja bersama.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SKILLS SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="skills" class="section-skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" id="skills-tag">Kompetensi</span>
+                <h2 class="section-title" id="skills-title">Keahlian &amp; Bidang</h2>
+                <p class="section-subtitle" id="skills-sub">Kemampuan yang terus diasah dalam dunia event dan
+                    komunikasi.</p>
+            </div>
+
+            <div class="skills-grid" id="skills-grid">
+                <div class="skill-card" id="skill-card-1">
+                    <div class="skill-icon-wrap">
+                        <i class="fa-solid fa-microphone-lines"></i>
+                    </div>
+                    <h3 class="skill-title">Public Speaking</h3>
+                    <p class="skill-desc">Berbicara di depan publik dengan percaya diri, jelas, dan memikat audiens dari
+                        berbagai kalangan.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MC Formal</span>
+                        <span class="skill-tag">MC Non-Formal</span>
+                        <span class="skill-tag">Narasi</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" id="skill-card-2">
+                    <div class="skill-icon-wrap">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <h3 class="skill-title">Event Planning</h3>
+                    <p class="skill-desc">Merancang konsep, menyusun rundown, dan mengelola jalannya acara dari
+                        persiapan hingga penutupan.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Konsep Acara</span>
+                        <span class="skill-tag">Rundown</span>
+                        <span class="skill-tag">Koordinasi</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" id="skill-card-3">
+                    <div class="skill-icon-wrap">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="skill-title">People Management</h3>
+                    <p class="skill-desc">Memimpin dan berkoordinasi dengan tim, memastikan kolaborasi yang solid demi
+                        kesuksesan acara.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Leadership</span>
+                        <span class="skill-tag">Teamwork</span>
+                        <span class="skill-tag">Komunikasi</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" id="skill-card-4">
+                    <div class="skill-icon-wrap">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="skill-title">Web Development</h3>
+                    <p class="skill-desc">Membangun halaman web responsif dan modern sebagai siswa jurusan PPLG yang
+                        terus berkembang.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML &amp; CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Responsive</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         PROJECTS SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="projects" class="section-projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" id="projects-tag">Portofolio</span>
+                <h2 class="section-title" id="projects-title">Proyek &amp; Karya</h2>
+                <p class="section-subtitle" id="projects-sub">Event, penampilan, dan karya yang telah diwujudkan.</p>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+                <div class="project-card" id="proj-card-1">
+                    <div class="project-banner project-banner-1">
+                        <span class="project-chip">Event</span>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-org">SMK Telkom Purwokerto</span>
+                        <h3 class="project-name">MC Pentas Seni Tahunan</h3>
+                        <p class="project-desc">Membawakan acara pentas seni sekolah dengan atmosfer yang meriah dan
+                            profesional.</p>
+                        <span class="project-link-hint">Detail Lengkap <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <div class="project-card" id="proj-card-2">
+                    <div class="project-banner project-banner-2">
+                        <span class="project-chip">Planning</span>
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-org">Program Kesiswaan</span>
+                        <h3 class="project-name">Koordinator Acara OSIS</h3>
+                        <p class="project-desc">Mengelola dan mengkoordinasikan acara-acara besar dalam program kerja
+                            OSIS.</p>
+                        <span class="project-link-hint">Detail Lengkap <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <div class="project-card" id="proj-card-3">
+                    <div class="project-banner project-banner-3">
+                        <span class="project-chip">Web</span>
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-org">Proyek KIK</span>
+                        <h3 class="project-name">Website Portofolio Pribadi</h3>
+                        <p class="project-desc">Membangun website portofolio profesional dengan HTML, CSS, dan
+                            JavaScript murni.</p>
+                        <span class="project-link-hint">Detail Lengkap <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         CONTACT / CLOSING SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="contact" class="section-contact">
+        <div class="container">
+            <div class="contact-inner">
+                <span class="section-tag contact-tag" id="contact-tag">Saluran Komunikasi</span>
+                <h2 class="contact-heading" id="contact-heading">
+                    Mari Terhubung &amp;<br><em>Berkolaborasi</em>
+                </h2>
+                <p class="contact-sub" id="contact-sub">
+                    Terbuka untuk tawaran MC, event planning, kolaborasi proyek, atau sekadar berdiskusi.
+                </p>
+
+                <div class="contact-cards" id="contact-cards">
+                    <a href="https://wa.me/6282192019618" target="_blank" rel="noopener" class="contact-card"
+                        id="contact-wa">
+                        <i class="fa-brands fa-whatsapp contact-icon" style="color: #4ade80;"></i>
+                        <span class="contact-label">WhatsApp</span>
+                        <span class="contact-value">0821-9201-9618</span>
+                        <span class="contact-cta">Buka Chat <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a>
+
+                    <a href="mailto:naufalmirzanugraha@gmail.com" class="contact-card"
+                        id="contact-email">
+                        <i class="fa-solid fa-envelope contact-icon" style="color: var(--gold-warm);"></i>
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value" id="email-display">naufalmirzanugraha@gmail.com</span>
+                        <span class="contact-cta">Kirim Email <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a>
+
+                    <a href="https://instagram.com/na_mirzaa" target="_blank" rel="noopener" class="contact-card"
+                        id="contact-ig">
+                        <i class="fa-brands fa-instagram contact-icon" style="color: #f472b6;"></i>
+                        <span class="contact-label">Instagram</span>
+                        <span class="contact-value">@na_mirzaa</span>
+                        <span class="contact-cta">Lihat Profil <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════════ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <span class="footer-brand">Mirza<span class="nav-brand-dot">.</span></span>
+                <p class="footer-copy">
+                    &copy; 2026 <strong>Naufal Mirza Nugraha</strong> — SMK Telkom Purwokerto.<br>
+                    Dirancang dengan dedikasi &amp; semangat berkarya.
+                </p>
+                <div class="footer-socials">
+                    <a href="https://instagram.com/na_mirzaa" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social-link" id="footer-ig"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/6282192019618" target="_blank" rel="noopener" aria-label="WhatsApp" class="footer-social-link" id="footer-wa"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="emailToast" role="alert" aria-live="polite">
+        <i class="fa-solid fa-circle-check" style="color: #6ee7b7;"></i>
+        <span>Email berhasil disalin ke clipboard!</span>
+    </div>
 
     <!-- Main JavaScript -->
     <script src="script.js" defer></script>
 </body>
+
 </html>
