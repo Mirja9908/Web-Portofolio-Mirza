@@ -140,6 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── 6. FULLSCREEN PROJECT DETAIL VIEW (Case Study Overlay) ──
     const PROJECT_DETAILS = {
         akabara: {
+            id: "akabara",
             number: "PROJECT 01",
             title: "AKABARA 33",
             date: "31 Januari 2026",
@@ -155,9 +156,31 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             challenge: "Di balik kemeriahan perayaan, fase persiapan menuntut konsentrasi tinggi. Menjelang hari H, ritme kerja panitia sangat intensif untuk memastikan setiap segmen acara tersinkronisasi dengan baik. Ada momen ketika koordinasi harus dilakukan secara cepat di tengah dinamika situasi dan pergeseran durasi di panggung. Bagi saya, tanggung jawab di Sie Acara adalah memastikan ketenangan di balik layar—kendala apa pun yang muncul tidak boleh mengganggu kenyamanan dan antusiasme audiens yang hadir.",
             takeaway: "Memperkuat kemampuan manajemen waktu panggung, komunikasi cepat dan tenang di balik layar, serta pengambilan keputusan situasional yang presisi.",
-            metrics: null
+            metrics: null,
+            featured: false,
+            photos: [
+                {
+                    id: "akabara-1",
+                    src: "",
+                    alt: "Dokumentasi AKABARA 33 — Alur Rundown & Panggung Utama",
+                    caption: "Dokumentasi Utama Panggung"
+                },
+                {
+                    id: "akabara-2",
+                    src: "",
+                    alt: "Dokumentasi AKABARA 33 — Koordinasi Pengisi Acara",
+                    caption: "Koordinasi Teknis Lapangan"
+                },
+                {
+                    id: "akabara-3",
+                    src: "",
+                    alt: "Dokumentasi AKABARA 33 — Puncak Acara & Audiens",
+                    caption: "Suasana Puncak Perayaan"
+                }
+            ]
         },
         bmts: {
+            id: "bmts",
             number: "FEATURED PROJECT — 02",
             title: "BMTS 33",
             date: "13–27 April 2026",
@@ -178,9 +201,37 @@ document.addEventListener('DOMContentLoaded', () => {
             metrics: [
                 { value: "12", label: "KELOMPOK KERJA" },
                 { value: "130+", label: "SISWA TERLIBAT" }
+            ],
+            featured: true,
+            photos: [
+                {
+                    id: "bmts-1",
+                    src: "",
+                    alt: "Dokumentasi BMTS 33 — Pengabdian Sosial Terpadu",
+                    caption: "Dokumentasi Utama Pengabdian Masyarakat"
+                },
+                {
+                    id: "bmts-2",
+                    src: "",
+                    alt: "Dokumentasi BMTS 33 — Mobilisasi 130+ Siswa",
+                    caption: "Mobilisasi & Pengarahan 12 Kelompok Kerja"
+                },
+                {
+                    id: "bmts-3",
+                    src: "",
+                    alt: "Dokumentasi BMTS 33 — Koordinasi Pimpinan Harian",
+                    caption: "Koordinasi Strategis Pimpinan & Divisi"
+                },
+                {
+                    id: "bmts-4",
+                    src: "",
+                    alt: "Dokumentasi BMTS 33 — Evaluasi Berkala Lapangan",
+                    caption: "Evaluasi & Mitigasi Risiko Lapangan"
+                }
             ]
         },
         classmeeting: {
+            id: "classmeeting",
             number: "PROJECT 03",
             title: "Classmeeting VITAVIT",
             date: "17–18 Juni 2026",
@@ -196,9 +247,31 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             challenge: "Tantangan utama dalam classmeeting adalah mengelola dinamika ratusan siswa yang berkompetisi secara serempak di beberapa titik lokasi. Manajemen waktu yang presisi menjadi kunci agar jadwal pertandingan futsal, senam kreasi, dan presentasi healthy food tidak mengalami penundaan yang mengganggu flow keseluruhan acara.",
             takeaway: "Mengasah keahlian crowd management, sinkronisasi jadwal multi-lomba secara paralel, serta komunikasi persuasif yang efektif kepada peserta.",
-            metrics: null
+            metrics: null,
+            featured: false,
+            photos: [
+                {
+                    id: "classmeeting-1",
+                    src: "",
+                    alt: "Dokumentasi Classmeeting VITAVIT — Kompetisi Futsal Antarkelas",
+                    caption: "Dokumentasi Pertandingan Futsal"
+                },
+                {
+                    id: "classmeeting-2",
+                    src: "",
+                    alt: "Dokumentasi Classmeeting VITAVIT — Senam Kreasi",
+                    caption: "Pelaksanaan Senam Kreasi Bersama"
+                },
+                {
+                    id: "classmeeting-3",
+                    src: "",
+                    alt: "Dokumentasi Classmeeting VITAVIT — Healthy Food & Lomba Vlog",
+                    caption: "Penjurian Healthy Food & Lomba Vlog"
+                }
+            ]
         },
         mpls: {
+            id: "mpls",
             number: "PROJECT 04",
             title: "MPLS 34",
             date: "13–17 Juli 2026",
@@ -214,9 +287,31 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             challenge: "Menjalankan peran MC selama dua hari penuh sekaligus tetap terlibat dalam koordinasi Sie Acara membutuhkan energi dan fokus yang sangat prima. Berdiri di depan ratusan siswa baru yang belum saling mengenal menuntut saya untuk mampu mencairkan suasana sejak menit pertama. Ketika rundown mengalami penyesuaian mendadak dari pemateri, saya harus tetap tenang di atas panggung, berimprovisasi dengan natural tanpa membiarkan jeda waktu terasa canggung oleh audiens.",
             takeaway: "Memperdalam kapasitas public speaking tingkat lanjut, ketahanan performa panggung durasi panjang, serta adaptabilitas tinggi menghadapi perubahan rundown.",
-            metrics: null
+            metrics: null,
+            featured: false,
+            photos: [
+                {
+                    id: "mpls-1",
+                    src: "",
+                    alt: "Dokumentasi MPLS 34 — Pemanduan Acara MC 2 Hari Penuh",
+                    caption: "Dokumentasi Master of Ceremony (MC)"
+                },
+                {
+                    id: "mpls-2",
+                    src: "",
+                    alt: "Dokumentasi MPLS 34 — Orientasi Siswa Baru",
+                    caption: "Suasana Orientasi Ratusan Siswa Baru"
+                },
+                {
+                    id: "mpls-3",
+                    src: "",
+                    alt: "Dokumentasi MPLS 34 — Koordinasi Pemateri & Acara",
+                    caption: "Koordinasi Pemateri & Bridging Materi"
+                }
+            ]
         },
         recruitment: {
+            id: "recruitment",
             number: "PROJECT 05",
             title: "Open Recruitment OSIS",
             date: "Juli–Oktober 2026",
@@ -232,9 +327,25 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             challenge: "Mengawal proses komunikasi selama rentang waktu beberapa bulan menuntut konsistensi tinggi dalam pelayanan informasi. Dalam tahapan interview, tantangan utama adalah membaca karakter dan potensi kepemimpinan pendaftar secara objektif dalam waktu yang terbatas guna menjaga kualitas regenerasi organisasi.",
             takeaway: "Meningkatkan kemampuan wawancara analitis, komunikasi interpersonal profesional, serta keandalan dalam memproses data dan evaluasi kandidat.",
-            metrics: null
+            metrics: null,
+            featured: false,
+            photos: [
+                {
+                    id: "recruitment-1",
+                    src: "",
+                    alt: "Dokumentasi Open Recruitment OSIS — Sesi Interview Calon Pengurus",
+                    caption: "Pelaksanaan Wawancara Mendalam Calon Pengurus"
+                },
+                {
+                    id: "recruitment-2",
+                    src: "",
+                    alt: "Dokumentasi Open Recruitment OSIS — Verifikasi Alur Pendaftaran",
+                    caption: "Alur Registrasi & Verifikasi Berkas"
+                }
+            ]
         },
         '17an': {
+            id: "17an",
             number: "PROJECT 06",
             title: "17-an",
             date: "17–19 Agustus 2026",
@@ -250,9 +361,31 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             challenge: "Tingginya antusiasme dan mobilitas siswa di area luar ruangan menuntut koordinasi lapangan yang ekstra sigap. Komunikasi antar-pos panitia harus terus terjaga agar seluruh rangkaian lomba selesai tepat waktu tanpa mengurangi semarak kemeriahan acara.",
             takeaway: "Memperkuat koordinasi tim di lapangan terbuka, kecepatan tanggap terhadap kendala teknis perlombaan, dan manajemen alur waktu kegiatan dinamis.",
-            metrics: null
+            metrics: null,
+            featured: false,
+            photos: [
+                {
+                    id: "17an-1",
+                    src: "",
+                    alt: "Dokumentasi 17-an — Perlombaan Tradisional Lapangan",
+                    caption: "Suasana Perlombaan Lapangan Kemerdekaan"
+                },
+                {
+                    id: "17an-2",
+                    src: "",
+                    alt: "Dokumentasi 17-an — Koordinasi Teknis Panitia",
+                    caption: "Koordinasi Lapangan Antar-Pos Kegiatan"
+                },
+                {
+                    id: "17an-3",
+                    src: "",
+                    alt: "Dokumentasi 17-an — Penganugerahan Pemenang",
+                    caption: "Seremonial Penganugerahan Pemenang"
+                }
+            ]
         },
         aksaradaya: {
+            id: "aksaradaya",
             number: "PROJECT 07",
             title: "AKSARADAYA",
             date: "23 Oktober 2026",
@@ -268,9 +401,31 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             challenge: "AKSARADAYA menghadirkan banyak segmen pertunjukan seni yang berbeda karakteristiknya dalam satu hari yang padat. Menjelang hari H, tuntutan koordinasi meningkat tajam untuk memastikan peralatan instrumen band, tata suara, tata panggung fashion show, hingga kesiapan podcast berada di posisi optimal. Sebagai Wakil Ketua Pelaksana, saya harus siap menjadi jembatan solusi ketika muncul ketidaksesuaian teknis di panggung, menjaga alur transisi antar penampilan tetap rapi dan memikat penonton.",
             takeaway: "Memperkaya kapasitas kepemimpinan dalam produksi event seni multi-format, diplomasi antar-divisi pertunjukan kreatif, dan ketepatan mitigasi risiko panggung.",
-            metrics: null
+            metrics: null,
+            featured: false,
+            photos: [
+                {
+                    id: "aksaradaya-1",
+                    src: "",
+                    alt: "Dokumentasi AKSARADAYA — Penampilan Band & Musikalisasi",
+                    caption: "Panggung Penampilan Seni & Musik"
+                },
+                {
+                    id: "aksaradaya-2",
+                    src: "",
+                    alt: "Dokumentasi AKSARADAYA — Fashion Show Budaya",
+                    caption: "Peragaan Busana Kebudayaan"
+                },
+                {
+                    id: "aksaradaya-3",
+                    src: "",
+                    alt: "Dokumentasi AKSARADAYA — Podcast Langsung",
+                    caption: "Sesi Podcast Langsung di Panggung"
+                }
+            ]
         },
         kpko: {
+            id: "kpko",
             number: "PROJECT 08",
             title: "KPKO — Kegiatan Pemilihan Ketua OSIS",
             date: "23 Oktober 2026",
@@ -286,7 +441,28 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             challenge: "Menyelenggarakan event demokrasi sebesar KPKO memiliki tingkat sensitivitas yang tinggi. Diadakan pada tanggal 23 Oktober 2026—hari yang sama di mana saya juga memegang tanggung jawab sebagai Wakil Ketua Pelaksana di AKSARADAYA—menuntut manajemen waktu dan pembagian fokus yang luar biasa disiplin. Setiap sesi dalam KPKO, terutama debat kandidat dan pencoblosan, membutuhkan ketepatan protokoler tanpa ruang untuk kesalahan. Ketenangan emosi dan koordinasi yang presisi dengan anggota tim adalah kunci keberhasilan mengawal pesta demokrasi ini berjalan tertib dan bermartabat.",
             takeaway: "Membuktikan kapasitas mengelola dua tanggung jawab besar secara paralel pada tanggal yang sama, kepemimpinan acara berintegritas tinggi, dan ketelitian protokoler seremonial formal.",
-            metrics: null
+            metrics: null,
+            featured: false,
+            photos: [
+                {
+                    id: "kpko-1",
+                    src: "",
+                    alt: "Dokumentasi KPKO — Debat Kandidat Ketua OSIS",
+                    caption: "Sesi Debat Kandidat Resmi"
+                },
+                {
+                    id: "kpko-2",
+                    src: "",
+                    alt: "Dokumentasi KPKO — Orasi Visi & Misi Kandidat",
+                    caption: "Orasi Visi-Misi di Hadapan Siswa"
+                },
+                {
+                    id: "kpko-3",
+                    src: "",
+                    alt: "Dokumentasi KPKO — Bilik Pemungutan Suara",
+                    caption: "Protokoler Bilik Pencoblosan Suara"
+                }
+            ]
         }
     };
 
@@ -295,9 +471,224 @@ document.addEventListener('DOMContentLoaded', () => {
     const backBtn = document.getElementById('detailBackBtn');
     const closeBtn = document.getElementById('detailCloseBtn');
     const storyCol = document.getElementById('detailColStory');
-    const docCol = document.getElementById('detailDocCol');
+    const docCol = document.getElementById('detailColDoc');
+
+    // Active State
+    let currentProjectId = null;
+    let currentPhotoIndex = 0;
     let lastActiveElement = null;
 
+    // Helper: generate frame inner HTML for a photo object
+    const createPhotoFrameHtml = (photo, data, index, total) => {
+        if (photo.src && photo.src.trim() !== '') {
+            return `
+                <div class="gallery-image-wrap">
+                    <img src="${photo.src}" alt="${photo.alt || photo.caption || data.title}" class="gallery-image" />
+                </div>
+            `;
+        }
+        return `
+            <div class="gallery-placeholder">
+                <div class="gallery-placeholder-icon">
+                    <i class="fa-regular fa-image"></i>
+                </div>
+                <span class="gallery-placeholder-tag">DOKUMENTASI PROYEK</span>
+                <h4 class="gallery-placeholder-title">${photo.caption || 'Dokumentasi Project'}</h4>
+                <p class="gallery-placeholder-desc">${photo.alt || `Arsip visual dokumentasi resmi untuk ${data.title}`}</p>
+                <div class="gallery-placeholder-slot">
+                    <i class="fa-solid fa-camera"></i>
+                    <span>Slot Dokumentasi ${index + 1} dari ${total}</span>
+                </div>
+            </div>
+        `;
+    };
+
+    // Render entire gallery shell & initial photo
+    const renderGallery = (data, photoIndex = 0) => {
+        if (!docCol) return;
+        const photos = data.photos || [];
+        const total = photos.length;
+
+        // Empty state: no photos exist
+        if (total === 0) {
+            docCol.innerHTML = `
+                <div class="gallery-header">
+                    <div class="gallery-badge">
+                        <i class="fa-solid fa-camera"></i>
+                        <span>DOKUMENTASI PROYEK</span>
+                    </div>
+                </div>
+                <div class="gallery-stage">
+                    <div class="gallery-frame">
+                        <div class="gallery-empty-state">
+                            <div class="gallery-placeholder-icon">
+                                <i class="fa-regular fa-images"></i>
+                            </div>
+                            <span class="gallery-placeholder-tag">DOKUMENTASI PROYEK</span>
+                            <h4 class="gallery-placeholder-title">Belum Ada Dokumentasi</h4>
+                            <p class="gallery-placeholder-desc">Slot dokumentasi foto untuk proyek ini akan segera diperbarui.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-footer">
+                    <span class="gallery-caption">Dokumentasi arsip resmi</span>
+                </div>
+            `;
+            return;
+        }
+
+        const idx = Math.max(0, Math.min(photoIndex, total - 1));
+        currentPhotoIndex = idx;
+        const currentPhoto = photos[idx];
+        const isSingle = total === 1;
+
+        const isPrevDisabled = isSingle || idx === 0;
+        const isNextDisabled = isSingle || idx === total - 1;
+
+        const frameHtml = createPhotoFrameHtml(currentPhoto, data, idx, total);
+
+        const dotsHtml = isSingle ? '' : photos.map((p, i) => `
+            <button type="button" class="gallery-dot ${i === idx ? 'active' : ''}" data-index="${i}" aria-label="Lihat foto ${i + 1} dari ${total}" ${i === idx ? 'aria-current="true"' : ''}></button>
+        `).join('');
+
+        docCol.innerHTML = `
+            <div class="gallery-header">
+                <div class="gallery-badge">
+                    <i class="fa-solid fa-camera"></i>
+                    <span>DOKUMENTASI PROYEK</span>
+                </div>
+                <div class="gallery-counter-wrap">
+                    <span class="gallery-counter" id="galleryCounter" aria-live="polite">${idx + 1} / ${total}</span>
+                </div>
+            </div>
+
+            <div class="gallery-stage" id="galleryStage">
+                <button type="button" class="gallery-nav-btn gallery-nav-prev" id="galleryPrevBtn" aria-label="Foto sebelumnya" title="Foto sebelumnya" ${isPrevDisabled ? 'disabled aria-disabled="true"' : ''}>
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <div class="gallery-frame" id="galleryFrame">
+                    ${frameHtml}
+                </div>
+
+                <button type="button" class="gallery-nav-btn gallery-nav-next" id="galleryNextBtn" aria-label="Foto berikutnya" title="Foto berikutnya" ${isNextDisabled ? 'disabled aria-disabled="true"' : ''}>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="gallery-footer">
+                <div class="gallery-dots" id="galleryDots" role="tablist" aria-label="Pilih foto dokumentasi">
+                    ${dotsHtml}
+                </div>
+                <p class="gallery-caption" id="galleryCaption">${currentPhoto.caption || 'Dokumentasi Proyek'}</p>
+            </div>
+        `;
+    };
+
+    // Smoothly update only the active slide without rebuilding the full shell
+    const updateGallerySlide = (data, photoIndex) => {
+        const photos = data.photos || [];
+        const total = photos.length;
+        if (total === 0) return;
+
+        const idx = Math.max(0, Math.min(photoIndex, total - 1));
+        currentPhotoIndex = idx;
+        const currentPhoto = photos[idx];
+        const isSingle = total === 1;
+
+        const counterEl = document.getElementById('galleryCounter');
+        const prevBtn = document.getElementById('galleryPrevBtn');
+        const nextBtn = document.getElementById('galleryNextBtn');
+        const frameEl = document.getElementById('galleryFrame');
+        const captionEl = document.getElementById('galleryCaption');
+        const dotBtns = docCol.querySelectorAll('.gallery-dot');
+
+        if (!frameEl) {
+            renderGallery(data, idx);
+            return;
+        }
+
+        // Update counter
+        if (counterEl) {
+            counterEl.textContent = `${idx + 1} / ${total}`;
+        }
+
+        // Update navigation buttons
+        if (prevBtn) {
+            const disablePrev = isSingle || idx === 0;
+            prevBtn.disabled = disablePrev;
+            prevBtn.setAttribute('aria-disabled', String(disablePrev));
+        }
+        if (nextBtn) {
+            const disableNext = isSingle || idx === total - 1;
+            nextBtn.disabled = disableNext;
+            nextBtn.setAttribute('aria-disabled', String(disableNext));
+        }
+
+        // Update frame content
+        frameEl.innerHTML = createPhotoFrameHtml(currentPhoto, data, idx, total);
+
+        // Update dots
+        if (dotBtns && dotBtns.length) {
+            dotBtns.forEach((dot, i) => {
+                const isActive = (i === idx);
+                dot.classList.toggle('active', isActive);
+                if (isActive) {
+                    dot.setAttribute('aria-current', 'true');
+                } else {
+                    dot.removeAttribute('aria-current');
+                }
+            });
+        }
+
+        // Update caption
+        if (captionEl) {
+            captionEl.textContent = currentPhoto.caption || 'Dokumentasi Proyek';
+        }
+    };
+
+    const navigateGallery = (delta) => {
+        if (!currentProjectId) return;
+        const data = PROJECT_DETAILS[currentProjectId];
+        if (!data || !data.photos || !data.photos.length) return;
+
+        const newIndex = currentPhotoIndex + delta;
+        if (newIndex >= 0 && newIndex < data.photos.length) {
+            updateGallerySlide(data, newIndex);
+        }
+    };
+
+    const setGalleryIndex = (newIndex) => {
+        if (!currentProjectId) return;
+        const data = PROJECT_DETAILS[currentProjectId];
+        if (!data || !data.photos || !data.photos.length) return;
+
+        if (newIndex >= 0 && newIndex < data.photos.length && newIndex !== currentPhotoIndex) {
+            updateGallerySlide(data, newIndex);
+        }
+    };
+
+    // Attach click delegation on docCol once (prevents listener buildup)
+    if (docCol) {
+        docCol.addEventListener('click', (e) => {
+            const prevBtn = e.target.closest('#galleryPrevBtn');
+            const nextBtn = e.target.closest('#galleryNextBtn');
+            const dotBtn = e.target.closest('.gallery-dot');
+
+            if (prevBtn && !prevBtn.disabled) {
+                navigateGallery(-1);
+            } else if (nextBtn && !nextBtn.disabled) {
+                navigateGallery(1);
+            } else if (dotBtn) {
+                const idx = parseInt(dotBtn.getAttribute('data-index'), 10);
+                if (!isNaN(idx)) {
+                    setGalleryIndex(idx);
+                }
+            }
+        });
+    }
+
+    // Render full project detail (Left story + Right gallery)
     const renderProjectDetail = (data) => {
         if (!data || !storyCol || !docCol) return;
 
@@ -367,73 +758,23 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
 
-        // Render Documentation Photos (Right Column)
-        docCol.innerHTML = `
-            <div class="detail-doc-header">
-                <div class="detail-doc-badge">
-                    <i class="fa-solid fa-camera"></i>
-                    <span>DOKUMENTASI PROYEK</span>
-                </div>
-                <span class="detail-doc-sub">Arsip Visual Resmi</span>
-            </div>
-
-            <!-- Main Photo (16:10 or 3:2 frame) -->
-            <div class="doc-frame doc-frame--main">
-                <div class="doc-frame-inner">
-                    <div class="doc-placeholder-content">
-                        <div class="doc-icon-wrap">
-                            <i class="fa-regular fa-image"></i>
-                        </div>
-                        <span class="doc-tag">01 — DOKUMENTASI UTAMA</span>
-                        <strong class="doc-title">Project Documentation</strong>
-                        <p class="doc-desc">Slot foto utama dokumentasi resmi ${data.title}.</p>
-                        <span class="doc-hint"><i class="fa-solid fa-arrow-up-from-bracket"></i> Siap untuk upload foto asli</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Supporting Photos Grid -->
-            <div class="doc-supporting-grid">
-                <div class="doc-frame doc-frame--sub">
-                    <div class="doc-frame-inner">
-                        <div class="doc-placeholder-content">
-                            <i class="fa-regular fa-image doc-sub-icon"></i>
-                            <span class="doc-tag">02 — DOKUMENTASI</span>
-                            <span class="doc-sub-label">Supporting Photo 01</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="doc-frame doc-frame--sub">
-                    <div class="doc-frame-inner">
-                        <div class="doc-placeholder-content">
-                            <i class="fa-regular fa-image doc-sub-icon"></i>
-                            <span class="doc-tag">03 — DOKUMENTASI</span>
-                            <span class="doc-sub-label">Supporting Photo 02</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="doc-frame doc-frame--sub">
-                    <div class="doc-frame-inner">
-                        <div class="doc-placeholder-content">
-                            <i class="fa-regular fa-image doc-sub-icon"></i>
-                            <span class="doc-tag">04 — DOKUMENTASI</span>
-                            <span class="doc-sub-label">Supporting Photo 03</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
+        // Render Right Column (Gallery) starting at photo 0
+        renderGallery(data, 0);
     };
 
     const openProjectDetail = (projectId, triggeringCard) => {
         const data = PROJECT_DETAILS[projectId];
         if (!data || !overlay) return;
 
+        currentProjectId = projectId;
+        currentPhotoIndex = 0;
         lastActiveElement = triggeringCard || document.activeElement;
+
         renderProjectDetail(data);
 
-        // Scroll overlay container to top
+        // Reset scroll position of both overlay and story panel
         overlay.scrollTop = 0;
+        if (storyCol) storyCol.scrollTop = 0;
 
         overlay.classList.add('active');
         overlay.setAttribute('aria-hidden', 'false');
@@ -451,6 +792,9 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.classList.remove('active');
         overlay.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+
+        currentProjectId = null;
+        currentPhotoIndex = 0;
 
         // Return focus to triggering card
         if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
@@ -478,10 +822,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (closeBtn) closeBtn.addEventListener('click', closeProjectDetail);
     if (backdrop) backdrop.addEventListener('click', closeProjectDetail);
 
-    // ESC key closes detail
+    // Keyboard support: ESC closes modal, Arrow keys navigate photos
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && overlay && overlay.classList.contains('active')) {
+        if (!overlay || !overlay.classList.contains('active')) return;
+
+        if (e.key === 'Escape') {
             closeProjectDetail();
+        } else if (e.key === 'ArrowLeft') {
+            navigateGallery(-1);
+        } else if (e.key === 'ArrowRight') {
+            navigateGallery(1);
         }
     });
 
